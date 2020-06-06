@@ -16,10 +16,6 @@
 #
 
 
-
-
-
-
 # default: &default
 #   adapter: postgresql
 #   encoding: unicode
@@ -30,15 +26,6 @@
 # development:
 #   <<: *default
 #   database: rubygems_development
-
-
-
-
-
-
-
-
-
 
 
   # The specified database role being used to connect to postgres.
