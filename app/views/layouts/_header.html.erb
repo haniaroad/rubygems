@@ -30,6 +30,12 @@
             Users
           <% end %>
         </li>
+        <li class="<%= 'active font-weight-bold' if current_page?(home_activity_path) %> nav-item">
+          <%= link_to home_activity_path, class: 'nav-link' do %>
+            <div class="fa fa-bell"></div>
+            Activity
+          <% end %>
+        </li>
       </ul>
       <div class="form-inline my-2 my-lg-0">
         <%= form_tag(courses_path, method: :get) do %>

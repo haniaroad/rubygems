@@ -33,6 +33,8 @@ gem 'devise'
 gem 'friendly_id', '~> 5.1'
 
 gem 'ransack'
+
+gem 'public_activity'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
