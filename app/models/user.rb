@@ -4,9 +4,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
          
+  rolify
+  
   def to_s
     email
   end
   
   has_many :courses
+  
+   after_create :assign_default_role
+
+  def assign_default_role
+    self.add_role(:student) if self.roles.blank?
+  end
 end
