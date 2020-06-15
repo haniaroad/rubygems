@@ -1,10 +1,16 @@
 <div class="card">
   <div class="card-header">
-    <div class="fa fa-user">
-      <%= link_to user.email, user_path(user) %>
-      <%= user.email %>
-    </div>
-    <div class="card-footer">
+    <div class="fa fa-user"></div>
+    <% if user.online? %>
+      <div class="text-success fa fa-circle">
+        <%= link_to user.email, user_path(user) %>
+      </div>
+    <% else %>
+      <div class="text-danger fa fa-circle">
+        <%= link_to user.email, user_path(user) %>
+      </div>
+    <% end %>
+      <div class="card-footer">
       Signed up
       <%= time_ago_in_words(user.created_at) %>
       ago
@@ -45,5 +51,4 @@
 </div>
 
 </div>
-
 
