@@ -1,6 +1,7 @@
 <div class="card">
   <div class="card-header">
     <div class="fa fa-user">
+      <%= link_to user.email, user_path(user) %>
       <%= user.email %>
     </div>
     <div class="card-footer">
@@ -39,8 +40,9 @@
     <%= role.name %>
     </div>
   <% end %>
-</div>
+    <%= link_to 'Edit roles', edit_user_path(user), class: 'btn btn-sm btn-warning' %>
 
+</div>
 
 </div>
 

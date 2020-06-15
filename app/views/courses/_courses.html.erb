@@ -18,8 +18,7 @@
     </div>
   </div>
   <div class="card-footer">
-        <%= link_to 'Show', course, class: 'btn-sm btn-primary' %>
-        <%= link_to 'Edit', edit_course_path(course), class: 'btn-sm btn-warning' %>
-        <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-danger' %>
+        <%= link_to 'Edit', edit_course_path(course), class: 'btn-sm btn-warning' if policy(course).edit? %>
+        <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-danger' if policy(course).destroy? %>
     </div>  
 </div>
